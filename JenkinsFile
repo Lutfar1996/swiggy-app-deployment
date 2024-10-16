@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Add build commands here, e.g., sh 'mvn clean install' for Maven projects
+                //Hello World
+                //Hello WOrld
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add test commands here, e.g., sh 'mvn test' for Maven projects
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Add deployment commands here, e.g., sh 'deploy_script.sh'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs.'
+        }
+    }
+}
