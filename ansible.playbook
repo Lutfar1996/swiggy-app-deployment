@@ -1,0 +1,27 @@
+# Sample YAML Configuration
+
+application:
+  name: my-app
+  version: 1.0.0
+  environment: production
+
+database:
+  host: localhost
+  port: 5432
+  name: mydatabase
+  username: dbuser
+  password: dbpassword
+
+logging:
+  level: INFO
+  file: /var/log/my-app.log
+
+services:
+  - name: service1
+    endpoint: http://localhost:8081
+  - name: service2
+    endpoint: http://localhost:8082
+
+features:
+  enableFeatureX: true
+  enableFeatureY: false
